@@ -142,7 +142,7 @@ namespace Project1 {
 			this->cbbAlgo->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->cbbAlgo->FormattingEnabled = true;
 			this->cbbAlgo->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"FCFS (FIrst Come FIrst Serve) ", L"NPP (Non-Preemptive Priority)",
+				L"FCFS (First Come First Serve)", L"NPP (Non-Preemptive Priority)",
 					L"SRTF (Shortest Remaining Time First)"
 			});
 			this->cbbAlgo->Location = System::Drawing::Point(111, 96);
@@ -340,7 +340,7 @@ namespace Project1 {
 		}
 
 
-		if (cbbAlgo->Text == "FCFS (First Come FIrst Serve)") {
+		if (cbbAlgo->Text == "FCFS (First Come First Serve)") {
 			// Declare variables to store process information and various metrics
 			int numProcesses;
 			vector<Process> processes;
@@ -429,7 +429,7 @@ namespace Project1 {
 
 			// Display process information in tabular format
 			for (const Process& p : processes) {
-				lstboxDisplay->Items->Add(String::Format(stdDetails, p.id, p.arrivalTime, p.burstTime, p.completionTime, p.turnaroundTime, p.waitingTime));
+				lstboxDisplay->Items->Add(String::Format(stdDetails, p.id, p.arrivalTime, p.burstTime, p.completionTime, p.turnaroundTime, p.waitingTime, " "));
 
 			}
 
